@@ -6,8 +6,8 @@
         "desc": "Longer description of the features available, caveats or limitations",
         "pricingOptions": [
             {"label":"50 tk + 25 tk/d", "type":"free"},
-            {"label":"$10 / month"},
-            {"label":"$500 / month", "type":"special"}
+            {"label":"$10 /m"},
+            {"label":"$500 /m", "type":"special"}
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"Image"}
@@ -19,9 +19,24 @@
         "descQuick": "WIP",
         "desc": "WIP",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"150 tk/d", "type":"free"},
+            {"label":"IMA", "tooltip":"Infinite Mail Accounts", "type":"free-trick"},
+            {"label":"$10 /m /y"},
+            {"label":"$24 /m /y"},
+            {"label":"$48 /m /y", "type":"special"}
         ],
         "features": [
+            {"type":"convert", "from":"Text", "to":"Image"},
+            {"type":"convert", "from":"Image", "to":"Image"},
+            {"type":"edit", "on":"Image", "with":"Inpainting"},
+            {"type":"edit", "on":"Image", "with":"Upscaling"},
+            {"type":"edit", "on":"Image", "with":"Unzooming"},
+            {"type":"edit", "on":"Image", "with":"Background removal"},
+            {"type":"convert", "from":"3D Model", "to":"Texture"},
+            {"type":"generic", "label":"Custom model training"},
+            {"type":"generic", "label":"Multiple ML Models"},
+            {"type":"generic", "label":"LLM Prompt generation"},
+            {"type":"generic", "label":"Private generations", "premium":true}
         ]
     },
     {
@@ -278,12 +293,12 @@
         ]
     },
     {
-        "name": "Neets",
+        "name": "Playground AI",
         "url": "https://playgroundai.com/",
         "descQuick": "WIP",
         "desc": "WIP",
         "pricingOptions": [
-            {"label":"500 token /day", "type":"free"}
+            {"label":"500 tk/d", "type":"free"}
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"Image"},
