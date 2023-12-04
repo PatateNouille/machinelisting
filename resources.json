@@ -1,10 +1,12 @@
 [
     {
         "name": "Resource name",
-        "desc-quick": "Quick desc of the resource",
+        "descQuick": "Quick desc of the resource",
         "desc": "Longer description of the features available, caveats or limitations",
-        "pricing-options": [
-            "Free", "$10 / month"
+        "pricingOptions": [
+            {"label":"50 tk + 25 tk/d", "type":"free"},
+            {"label":"$10 / month"},
+            {"label":"$500 / month", "type":"special"}
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"Image"}
