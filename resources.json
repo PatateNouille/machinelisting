@@ -1,6 +1,7 @@
 [
     {
         "name": "Resource name",
+        "url": "https://app.leonardo.ai/",
         "descQuick": "Quick desc of the resource",
         "desc": "Longer description of the features available, caveats or limitations",
         "pricingOptions": [
@@ -10,6 +11,7 @@
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"Image"}
-        ]
+        ],
+        "infoChecked": true
     }
 ]

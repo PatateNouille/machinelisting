@@ -21,7 +21,7 @@ function populateResources(data)
 function createResourceElement(data)
 {
     const resElem = document.createElement('div');
-    const nameElem = resElem.appendChild(document.createElement('h3'));
+    const nameElem = resElem.appendChild(document.createElement('a'));
     const descQuickElem = resElem.appendChild(document.createElement('p'));
     const pricingOptionsElem = resElem.appendChild(document.createElement('div'));
     const descElem = resElem.appendChild(document.createElement('p'));
@@ -34,6 +34,10 @@ function createResourceElement(data)
     descElem.classList.add('desc');
     featuresElem.classList.add('features');
 
+    if (data.infoChecked !== true)
+        resElem.classList.add('need-check');
+
+    nameElem.href = data.url;
     nameElem.innerText = data.name;
     descQuickElem.innerText = data.descQuick;
     descElem.innerText = data.desc;

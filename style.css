@@ -3,6 +3,10 @@
 {
     --text: #f0eff6;
     --text-secondary: #a5a5a5;
+    --text-error: #ff6464;
+    --text-warning: #db9811;
+    --text-success: #48da11;
+    --text-info: #5595f9;
 
     --background: #020203;
     --panel-background: #0b0b11;
@@ -47,6 +51,11 @@ h1
     font-size: 5em;
 }
 
+a
+{
+    color: var(--text-info);
+}
+
 
 
 /* ------- CONTENT ------- */
@@ -60,10 +69,6 @@ header
     text-align: center;
 }
 
-.search
-{
-    
-}
 
 .catalog
 {
@@ -80,8 +85,52 @@ header
     border-width: 0px 2px 2px 2px;
     
     display: inline-block;
+    
+    background-image: linear-gradient(180deg, transparent, var(--panel-background));
+}
 
-    background-color: var(--panel-background);
+.resource.need-check
+{
+    border-color: var(--warning);
+}
+
+.resource.need-check::after
+{
+    margin: 2px 5px;
+    padding: 2px 4px;
+
+    content: '/!\\ Needs checking';
+    color: var(--text-warning);
+}
+
+
+.resource .name
+{
+    margin-bottom: 8px;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--text);
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.resource .name::after
+{
+    width: 17px;
+    height: 17px;
+
+    margin-left: 5px;
+
+    display: inline-block;
+
+    background-color: var(--text);
+    -webkit-mask-image: url('icons/output_FILL0_wght400_GRAD0_opsz24.svg'); /* these frigging don't work :( */
+    mask-image: url('icons/output_FILL0_wght400_GRAD0_opsz24.svg');
+
+    content: '';
 }
 
 
@@ -127,7 +176,7 @@ header
 .resource .features
 {
     margin: 5px 0;
-    
+
     display: flex;
     flex-direction: column;
     align-items: stretch;
