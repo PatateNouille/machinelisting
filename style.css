@@ -1,0 +1,120 @@
+/* ------- GLOBAL ------- */
+:root
+{
+    --text: #f0eff6;
+    --background: #020203;
+    --panel-background: #0b0b11;
+    --primary: #36a6d6;
+    --secondary: #262564;
+    --accent: #2221a4;
+    --error: #760909;
+    --warning: #5d4109;
+    --success: #1c5606;
+    --info: #062556;
+    --neutral: #414449;
+}
+
+/* ------- DEFAULTS ------- */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body
+{
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    color: var(--text);
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+}
+
+h1
+{
+    color: var(--primary);
+    font-size: 5em;
+}
+
+/* ------- CONTENT ------- */
+.page
+{
+    padding: 5vw;
+}
+
+header
+{
+    text-align: center;
+}
+
+.search
+{
+    
+}
+
+.catalog
+{
+    
+}
+
+.resource
+{
+    display: inline-block;
+    background-color: var(--panel-background);
+    padding: 10px;
+    border-radius: 10px;
+    border: var(--accent) solid;
+    border-width: 0px 2px 2px 2px;
+}
+
+/* ------- LOG ------- */
+.log
+{
+    padding: 5px;
+}
+
+.log.empty
+{
+    visibility: hidden;
+}
+
+.log-entry
+{
+    display: grid;
+    grid-template: 'status message data';
+    grid-template-columns: 30px auto 1fr;
+    grid-column-gap: 20px;
+    align-items: center;
+
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+
+    background-color: var(--neutral);
+}
+
+.log-unknown, .log-redirect
+{
+    background-color: var(--warning);
+}
+
+.log-info
+{
+    background-color: var(--info);
+}
+
+.log-success
+{
+    background-color: var(--success);
+}
+
+.log-client, 
+.log-server
+{
+    background-color: var(--error);
+}

@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Resource name",
+        "desc-quick": "Quick desc of the resource",
+        "desc": "Longer description of the features available, caveats or limitations",
+        "pricing-options": [
+            "Free", "$10 / month"
+        ],
+        "features": [
+            {"type":"convert", "from":"Text", "to":"Image"}
+        ]
+    }
+]
