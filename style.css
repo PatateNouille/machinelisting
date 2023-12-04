@@ -133,6 +133,9 @@ header
     -webkit-mask-image: url('icons/output_FILL0_wght400_GRAD0_opsz24.svg'); /* these frigging don't work :( */
     mask-image: url('icons/output_FILL0_wght400_GRAD0_opsz24.svg');
 
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
     content: '';
 }
 
