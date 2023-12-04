@@ -67,5 +67,227 @@
         ],
         "features": [
         ]
+    },
+    {
+        "name": "Luma AI",
+        "url": "https://lumalabs.ai/",
+        "descQuick": "WIP",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Video", "to":"3D"}
+        ]
+    },
+    {
+        "name": "Luma Labs Generate",
+        "url": "https://lumalabs.ai/discord",
+        "descQuick": "WIP",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Text", "to":"3D"}
+        ]
+    },
+    {
+        "name": "Perplexity",
+        "url": "https://www.perplexity.ai/",
+        "descQuick": "search/general",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+        ]
+    },
+    {
+        "name": "SciSpace",
+        "url": "https://typeset.io/",
+        "descQuick": "search scientific papers",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+        ]
+    },
+    {
+        "name": "Google Labs",
+        "url": "https://labs.google/",
+        "descQuick": "Multiple models",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+        ]
+    },
+    {
+        "name": "Waveformer",
+        "url": "https://waveformer.replicate.dev/",
+        "descQuick": "Easier to use but more limited version of MusicGen",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Text", "to":"3D"}
+        ]
+    },
+    {
+        "name": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "descQuick": "WIP",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Text", "to":"Music"}
+        ]
+    },
+    {
+        "name": "TextFX",
+        "url": "https://textfx.withgoogle.com/",
+        "descQuick": "text tools",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+        ]
+    },
+    {
+        "name": "Leia Pix",
+        "url": "https://convert.leiapix.com/",
+        "descQuick": "WIP",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Image", "to":"Video"},
+            {"type":"convert", "from":"Image", "to":"Depth map"}
+        ]
+    },
+    {
+        "name": "Ilumine AI",
+        "url": "https://huggingface.co/spaces/ilumine-AI/Insta-3D",
+        "descQuick": "Visualize images in 3D with a depth map",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+        ]
+    },
+    {
+        "name": "Drawing Animation",
+        "url": "https://sketch.metademolab.com/",
+        "descQuick": "Animate your childhood drawings",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Image", "to":"Video"}
+        ]
+    },
+    {
+        "name": "Pika",
+        "url": "http://discord.gg/pika",
+        "descQuick": "WIP",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Text", "to":"Video"},
+            {"type":"convert", "from":"Image", "to":"Video"}
+        ]
+    },
+    {
+        "name": "CapCut",
+        "url": "https://www.capcut.com/",
+        "descQuick": "Video editing suite",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+        ]
+    },
+    {
+        "name": "Replicate",
+        "url": "https://replicate.com/",
+        "descQuick": "custom models cloud + local + explore",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+        ]
+    },
+    {
+        "name": "Upscayl",
+        "url": "https://www.upscayl.org/",
+        "descQuick": "image upscaling cloud + local",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+        ]
+    },
+    {
+        "name": "Illusion Diffusion",
+        "url": "https://huggingface.co/spaces/AP123/IllusionDiffusion",
+        "descQuick": "mask constrained image gen",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+        ]
+    },
+    {
+        "name": "Ideogram AI",
+        "url": "https://ideogram.ai/",
+        "descQuick": "WIP",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Text", "to":"Image"}
+        ]
+    },
+    {
+        "name": "Bing Create",
+        "url": "https://www.bing.com/create",
+        "descQuick": "WIP",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"25 token /week"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Text", "to":"Image"}
+        ]
+    },
+    {
+        "name": "Neets",
+        "url": "https://playgroundai.com/",
+        "descQuick": "WIP",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"500 token /day", "type":"free"}
+        ],
+        "features": [
+            {"type":"convert", "from":"Text", "to":"Image"},
+            {"type":"convert", "from":"Image", "to":"Image"}
+        ]
     }
 ]
