@@ -5,7 +5,7 @@ var catalogElem = document.getElementById('catalog');
 
 
 // --- Test
-getJSON('https://patatenouille.github.io/machinelisting.github.io/resources.json', populateResources, 'Could not load the resource data :(');
+getGithubJSON('PatateNouille', 'machinelisting', 'resources.json', populateResources, 'Could not load the resource data :(');
 
 
 
@@ -24,16 +24,13 @@ function createResourceElement(data)
     const nameElem = resElem.appendChild(document.createElement('h3'));
     const descQuickElem = resElem.appendChild(document.createElement('p'));
     const pricingOptionsElem = resElem.appendChild(document.createElement('div'));
-    const detailsElem = resElem.appendChild(document.createElement('div'));
-
-    const descElem = detailsElem.appendChild(document.createElement('p'));
-    const featuresElem = detailsElem.appendChild(document.createElement('div'));
+    const descElem = resElem.appendChild(document.createElement('p'));
+    const featuresElem = resElem.appendChild(document.createElement('div'));
     
     resElem.classList.add('resource');
     nameElem.classList.add('name');
     descQuickElem.classList.add('desc-quick');
     pricingOptionsElem.classList.add('pricing-options');
-    detailsElem.classList.add('details');
     descElem.classList.add('desc');
     featuresElem.classList.add('features');
 
@@ -56,7 +53,7 @@ function createResourceElement(data)
     {
         const featureElem = featuresElem.appendChild(document.createElement('div'))
 
-        featureElem.classList.add('feature');
+        featureElem.classList.add('feature', feature.type);
 
         switch (feature.type)
         {
@@ -85,13 +82,43 @@ function createResourceTypeElement(type)
 
 
 // --- Utility
+function getGithubJSON(owner, repo, relativePath, callback, errorMessage, errorCallback = logOnPage)
+{
+    getJSON('https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+relativePath, getBlob, "Could not get file information", onFail);
+
+    function getBlob(data)
+    {
+        getJSON(data.git_url, decodeBlob, 'Could not get blob data', onFail);
+    }
+
+    function decodeBlob(data)
+    {
+        try
+        {
+            callback(JSON.parse(atob(data.content)));
+        }
+        catch (error)
+        {
+            errorCallback(400, errorMessage, error);
+        }
+    }
+
+    function onFail(status, message, data)
+    {
+        errorCallback(status, errorMessage + ': ' + message, data);
+    }
+}
+
 function getJSON(url, callback, errorMessage, errorCallback = logOnPage)
 {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'json';
-    xhr.onload = function()
+    xhr.onreadystatechange = function()
     {
+        if (xhr.readyState !== XMLHttpRequest.DONE)
+            return;
+
         var status = xhr.status;
         if (status === 200)
             callback(xhr.response);
@@ -99,7 +126,14 @@ function getJSON(url, callback, errorMessage, errorCallback = logOnPage)
             errorCallback(status, errorMessage, xhr.response);
     };
     
-    xhr.send();
+    try
+    {
+        xhr.send();
+    }
+    catch (error)
+    {
+        errorCallback(403, "An unexpected error occured", error);
+    }
 };
 
 function logOnPage(status, message, data)

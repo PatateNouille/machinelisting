@@ -2,17 +2,23 @@
 :root
 {
     --text: #f0eff6;
+    --text-secondary: #a5a5a5;
+
     --background: #020203;
     --panel-background: #0b0b11;
+
     --primary: #36a6d6;
     --secondary: #262564;
     --accent: #2221a4;
+
     --error: #760909;
     --warning: #5d4109;
     --success: #1c5606;
     --info: #062556;
     --neutral: #414449;
 }
+
+
 
 /* ------- DEFAULTS ------- */
 *
@@ -41,6 +47,8 @@ h1
     font-size: 5em;
 }
 
+
+
 /* ------- CONTENT ------- */
 .page
 {
@@ -59,18 +67,91 @@ header
 
 .catalog
 {
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .resource
 {
-    display: inline-block;
-    background-color: var(--panel-background);
+    margin: 10px;
     padding: 10px;
     border-radius: 10px;
     border: var(--accent) solid;
     border-width: 0px 2px 2px 2px;
+    
+    display: inline-block;
+
+    background-color: var(--panel-background);
 }
+
+
+.resource .desc-quick
+{
+    color: var(--text-secondary);
+}
+
+.resource .desc
+{
+    color: var(--text-secondary);
+}
+
+
+.resource .pricing-options
+{
+    margin: 5px 0;
+
+    display: flex;
+}
+
+.resource .pricing
+{
+    margin: 2px 5px;
+    padding: 2px 4px;
+
+    border-radius: 4px;
+
+    background-color: var(--neutral);
+}
+
+.resource .pricing.free
+{
+    background-color: var(--success);
+}
+
+.resource .pricing.special
+{
+    background-color: var(--warning);
+}
+
+
+.resource .features
+{
+    margin: 5px 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.resource .feature
+{
+    display: flex;
+    align-items: center;
+}
+
+
+.type
+{
+    margin: 2px 5px;
+    padding: 2px 4px;
+    border-radius: 4px;
+
+    background-color: var(--neutral);
+
+    font-weight: bold;
+}
+
+
 
 /* ------- LOG ------- */
 .log
