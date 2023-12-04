@@ -1,7 +1,7 @@
 [
     {
-        "name": "Leonardo",
-        "url": "https://app.leonardo.ai/",
+        "name": "Example Resource",
+        "url": "https://url.com/",
         "descQuick": "Quick desc of the resource",
         "desc": "Longer description of the features available, caveats or limitations",
         "pricingOptions": [
@@ -11,67 +11,61 @@
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"Image"}
+        ]
+    },
+    {
+        "name": "Leonardo",
+        "url": "https://app.leonardo.ai/",
+        "descQuick": "WIP",
+        "desc": "WIP",
+        "pricingOptions": [
+            {"label":"WIP"}
         ],
-        "infoChecked": true
+        "features": [
+        ]
     },
     {
         "name": "Eleven labs",
         "url": "https://elevenlabs.io/",
-        "descQuick": "Quick desc of the resource",
-        "desc": "Longer description of the features available, caveats or limitations",
+        "descQuick": "WIP",
+        "desc": "WIP",
         "pricingOptions": [
-            {"label":"50 tk + 25 tk/d", "type":"free"},
-            {"label":"$10 / month"},
-            {"label":"$500 / month", "type":"special"}
+            {"label":"WIP"}
         ],
         "features": [
-            {"type":"convert", "from":"Text", "to":"Image"}
-        ],
-        "infoChecked": true
+        ]
     },
     {
         "name": "Suno",
         "url": "https://app.suno.ai/",
-        "descQuick": "Quick desc of the resource",
-        "desc": "Longer description of the features available, caveats or limitations",
+        "descQuick": "WIP",
+        "desc": "WIP",
         "pricingOptions": [
-            {"label":"50 tk + 25 tk/d", "type":"free"},
-            {"label":"$10 / month"},
-            {"label":"$500 / month", "type":"special"}
+            {"label":"WIP"}
         ],
         "features": [
-            {"type":"convert", "from":"Text", "to":"Image"}
-        ],
-        "infoChecked": true
+        ]
     },
     {
         "name": "RunwayML",
         "url": "https://runwayml.com/",
-        "descQuick": "Quick desc of the resource",
-        "desc": "Longer description of the features available, caveats or limitations",
+        "descQuick": "WIP",
+        "desc": "WIP",
         "pricingOptions": [
-            {"label":"50 tk + 25 tk/d", "type":"free"},
-            {"label":"$10 / month"},
-            {"label":"$500 / month", "type":"special"}
+            {"label":"WIP"}
         ],
         "features": [
-            {"type":"convert", "from":"Text", "to":"Image"}
-        ],
-        "infoChecked": true
+        ]
     },
     {
         "name": "Neets",
         "url": "https://neets.ai/",
-        "descQuick": "Quick desc of the resource",
-        "desc": "Longer description of the features available, caveats or limitations",
+        "descQuick": "WIP",
+        "desc": "WIP",
         "pricingOptions": [
-            {"label":"50 tk + 25 tk/d", "type":"free"},
-            {"label":"$10 / month"},
-            {"label":"$500 / month", "type":"special"}
+            {"label":"WIP"}
         ],
         "features": [
-            {"type":"convert", "from":"Text", "to":"Image"}
-        ],
-        "infoChecked": true
+        ]
     }
 ]
