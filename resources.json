@@ -8,7 +8,7 @@
             {"label":"IMA", "tooltip":"Infinite Mail Accounts", "type":"free-trick"},
             {"label":"$10 /m /y"},
             {"label":"$24 /m /y"},
-            {"label":"$48 /m /y", "type":"special"}
+            {"label":"$48 /m /y", "type":"expensive"}
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"Image"},
@@ -17,7 +17,7 @@
             {"type":"edit", "on":"Image", "with":"Upscaling"},
             {"type":"edit", "on":"Image", "with":"Unzooming"},
             {"type":"edit", "on":"Image", "with":"Background removal"},
-            {"type":"convert", "from":"3D Model", "to":"Texture"},
+            {"type":"convert", "from":"Mesh", "to":"Texture"},
             {"type":"generic", "label":"Custom model training"},
             {"type":"generic", "label":"Multiple ML Models"},
             {"type":"generic", "label":"LLM Prompt generation"},
@@ -28,58 +28,112 @@
     {
         "name": "Eleven labs",
         "url": "https://elevenlabs.io/",
-        "desc": "WIP",
+        "desc": "Generate natural sounding speech and create custom voices",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"10k tk/m", "type":"free"},
+            {"label":"$5 /m"},
+            {"label":"$11 /m"},
+            {"label":"$99 /m", "type":"expensive"},
+            {"label":"$330 /m", "type":"expensive"},
+            {"label":"Enterprise", "type":"special"}
         ],
         "features": [
-        ]
+            {"type":"convert", "from":"Text", "to":"Speech"},
+            {"type":"convert", "from":"Speech", "to":"Speech"},
+            {"type":"edit", "on":"Video", "with":"Dubbing"},
+            {"type":"generic", "label":"Clone voices"},
+            {"type":"generic", "label":"29 languages supported"},
+            {"type":"generic", "label":"No attribution", "premium":true},
+            {"type":"generic", "label":"Commercial use", "premium":true},
+            {"type":"generic", "label":"API access"}
+        ],
+        "infoChecked": true
     },
     {
         "name": "Suno",
         "url": "https://app.suno.ai/",
-        "desc": "WIP",
+        "desc": "Create songs with lyrics",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"50 tk/d", "tooltip":"Allows for about 5 songs", "type":"free"},
+            {"label":"$8 /m /y"},
+            {"label":"$24 /m /y"}
         ],
         "features": [
-        ]
+            {"type":"generic", "label":"No attribution"},
+            {"type":"generic", "label":"Commercial use", "premium":true}
+        ],
+        "infoChecked": true
     },
     {
         "name": "RunwayML",
         "url": "https://runwayml.com/",
-        "desc": "WIP",
+        "desc": "Generate videos from anything and e",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"125 tk", "tooltip":"Does not regenerate", "type":"free-limited"},
+            {"label":"$12 /m /y"},
+            {"label":"$28 /m /y"},
+            {"label":"$76 /m /y", "tooltip":"Unlimited in relax mode", "type":"expensive"},
+            {"label":"Enterprise", "type":"special"}
         ],
         "features": [
-        ]
+            {"type":"convert", "from":"Text", "to":"Video"},
+            {"type":"convert", "from":"Image", "to":"Video"},
+            {"type":"convert", "from":"Video", "to":"Video"},
+            {"type":"convert", "from":"Text", "to":"Image"},
+            {"type":"convert", "from":"Image", "to":"Image"},
+            {"type":"edit", "on":"Video", "with":"Object removal"},
+            {"type":"edit", "on":"Video", "with":"Background removal"},
+            {"type":"edit", "on":"Video", "with":"Frame interpolation"},
+            {"type":"edit", "on":"Image", "with":"Motion mask"},
+            {"type":"edit", "on":"Image", "with":"Expand"},
+            {"type":"edit", "on":"Image", "with":"Frame interpolation"},
+            {"type":"generic", "label":"Custom model training", "premium":true},
+            {"type":"generic", "label":"No watermark", "premium":true},
+            {"type":"generic", "label":"No attribution"},
+            {"type":"generic", "label":"Commercial use"}
+        ],
+        "infoChecked": true
     },
     {
         "name": "Neets",
         "url": "https://neets.ai/",
-        "desc": "WIP",
+        "desc": "Chat via text with a controllable GPT or create audio from text",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"25k tk/m", "type":"free"},
+            {"label":"$6 /m"}
         ],
         "features": [
+            {"type":"generic", "label":"Customizable GPTs"},
+            {"type":"convert", "from":"Text", "to":"Speech"},
+            {"type":"generic", "label":"Clone voices"},
+            {"type":"generic", "label":"Commercial use"},
+            {"type":"generic", "label":"API access", "premium":true}
         ]
     },
     {
         "name": "Luma AI",
         "url": "https://lumalabs.ai/",
-        "desc": "WIP",
+        "desc": "Photoscan scenes to share and show them via NeRFs",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free NeRF from scan", "type":"free"},
+            {"label":"$1 / NeRF from video"}
         ],
         "features": [
-            {"type":"convert", "from":"Video", "to":"3D"}
+            {"type":"convert", "from":"Video", "to":"NeRF"},
+            {"type":"edit", "on":"NeRF", "with":"Camera track"},
+            {"type":"convert", "from":"NeRF", "to":"Mesh"},
+            {"type":"generic", "label":"Embed NeRFs on web pages"},
+            {"type":"generic", "label":"API access"}
+        ],
+        "caveats": [
+            {"label":"iOS only app", "severity":"medium"},
+            {"label":"Sign In through Apple or Google only", "severity":"low"}
         ]
     },
     {
-        "name": "Luma Labs Generate",
+        "name": "Luma Labs Genie",
         "url": "https://lumalabs.ai/discord",
-        "desc": "WIP",
+        "desc": "Generate",
         "pricingOptions": [
             {"label":"WIP"}
         ],
@@ -274,11 +328,14 @@
         "desc": "Quick desc of the resource",
         "pricingOptions": [
             {"label":"50 tk + 25 tk/d", "type":"free"},
+            {"label":"Incognito", "tooltip":"Clear cookies to reset token count", "type":"free-trick"},
             {"label":"$10 /m"},
             {"label":"$500 /m", "type":"special"}
         ],
         "features": [
-            {"type":"convert", "from":"Text", "to":"Image"}
+            {"type":"convert", "from":"Text", "to":"Image"},
+            {"type":"edit", "on":"Image", "with":"Inpainting", "premium":true},
+            {"type":"generic", "label":"Custom model training"}
         ],
         "infoChecked": true
     }

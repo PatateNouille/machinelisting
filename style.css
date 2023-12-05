@@ -175,6 +175,16 @@ header
     background-image: linear-gradient(25deg, var(--success) 50%, var(--neutral) 50%);
 }
 
+.resource .pricing.free-limited
+{
+    background-image: linear-gradient(25deg, var(--success) 50%, var(--warning) 50%);
+}
+
+.resource .pricing.expensive
+{
+    background-color: var(--warning);
+}
+
 .resource .pricing.special
 {
     background-color: var(--warning);
@@ -230,6 +240,40 @@ header
 .resource .feature.edit
 {
     padding: 0 4px;
+}
+
+
+.resource .caveats
+{
+    margin: 5px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.resource .caveat
+{
+    margin: 2px 5px;
+}
+
+.resource .caveat.low
+{
+    color: var(--text-error);
+}
+
+.resource .caveat.medium
+{
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 2px var(--error);
+    
+    color: var(--text-error);
+}
+
+.resource .caveat.high
+{
+    background-color: var(--error);
+    color: var(--text);
 }
 
 

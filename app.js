@@ -95,6 +95,21 @@ function createResourceElement(data)
         }
     });
 
+    // - Add all caveats
+    if ('caveats' in data)
+    {
+        const caveatsElem = resElem.appendChild(document.createElement('div'));
+        caveatsElem.classList.add('caveats');
+        data.caveats.forEach(caveat =>
+        {
+            const caveatElem = caveatsElem.appendChild(document.createElement('p'))
+
+            caveatElem.classList.add('caveat', caveat.severity);
+            
+            caveatElem.innerText = caveat.label;
+        });
+    }
+
     return resElem;
 }
 
