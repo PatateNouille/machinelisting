@@ -79,11 +79,11 @@
             {"type":"convert", "from":"Text", "to":"Video"},
             {"type":"convert", "from":"Image", "to":"Video"},
             {"type":"convert", "from":"Video", "to":"Video"},
-            {"type":"convert", "from":"Text", "to":"Image"},
-            {"type":"convert", "from":"Image", "to":"Image"},
             {"type":"edit", "on":"Video", "with":"Object removal"},
             {"type":"edit", "on":"Video", "with":"Background removal"},
             {"type":"edit", "on":"Video", "with":"Frame interpolation"},
+            {"type":"convert", "from":"Text", "to":"Image"},
+            {"type":"convert", "from":"Image", "to":"Image"},
             {"type":"edit", "on":"Image", "with":"Motion mask"},
             {"type":"edit", "on":"Image", "with":"Expand"},
             {"type":"edit", "on":"Image", "with":"Frame interpolation"},
@@ -108,7 +108,8 @@
             {"type":"generic", "label":"Clone voices"},
             {"type":"generic", "label":"Commercial use"},
             {"type":"generic", "label":"API access", "premium":true}
-        ]
+        ],
+        "infoChecked": true
     },
     {
         "name": "Luma AI",
@@ -128,7 +129,8 @@
         "caveats": [
             {"label":"iOS only app", "severity":"medium"},
             {"label":"Sign In through Apple or Google only", "severity":"low"}
-        ]
+        ],
+        "infoChecked": true
     },
     {
         "name": "Luma Labs Genie",
@@ -139,6 +141,9 @@
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"3D"}
+        ],
+        "caveats": [
+            {"label":"Use through discord only", "severity":"low"}
         ]
     },
     {
