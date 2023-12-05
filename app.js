@@ -42,6 +42,7 @@ function createResourceElement(data)
     descQuickElem.innerText = data.descQuick;
     descElem.innerText = data.desc;
 
+    // - Add all pricing options
     data.pricingOptions.forEach(pricing => 
     {
         const pricingElem = pricingOptionsElem.appendChild(document.createElement('p'));
@@ -50,22 +51,49 @@ function createResourceElement(data)
         if ('type' in pricing)
             pricingElem.classList.add(pricing.type);
 
-            pricingElem.innerText = pricing.label;
+        pricingElem.innerText = pricing.label;
+
+        if ('tooltip' in pricing)
+        {
+            const tooltipElem = pricingElem.appendChild(document.createElement('span'));
+
+            pricingElem.classList.add('has-tooltip');
+            tooltipElem.classList.add('tooltip');
+
+            tooltipElem.innerText = pricing.tooltip;
+        }
     });
 
+    // - Add all features
     data.features.forEach(feature =>
     {
         const featureElem = featuresElem.appendChild(document.createElement('div'))
 
         featureElem.classList.add('feature', feature.type);
+        if (feature.premium === true)
+            featureElem.classList.add('premium');
 
         switch (feature.type)
         {
             default:
+                featureElem.appendChild(document.createTextNode(JSON.stringify(feature)))
+                break;
+
+            case 'generic':
+                featureElem.appendChild(document.createTextNode(feature.label))
+                break;
+
             case 'convert':
                 featureElem.appendChild(createResourceTypeElement(feature.from))
                 featureElem.appendChild(document.createTextNode(' to '))
                 featureElem.appendChild(createResourceTypeElement(feature.to))
+                break;
+
+            case 'edit':
+                featureElem.appendChild(document.createTextNode(' Edit '))
+                featureElem.appendChild(createResourceTypeElement(feature.on))
+                featureElem.appendChild(document.createTextNode(' with '))
+                featureElem.appendChild(createFeatureTypeElement(feature.with))
                 break;
         }
     });
@@ -77,7 +105,17 @@ function createResourceTypeElement(type)
 {
     const typeElem = document.createElement('p')
 
-    typeElem.classList.add('type');
+    typeElem.classList.add('resource-type');
+    typeElem.innerText = type;
+
+    return typeElem;
+}
+
+function createFeatureTypeElement(type)
+{
+    const typeElem = document.createElement('p')
+
+    typeElem.classList.add('feature-type');
     typeElem.innerText = type;
 
     return typeElem;

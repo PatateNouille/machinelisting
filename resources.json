@@ -11,7 +11,8 @@
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"Image"}
-        ]
+        ],
+        "infoChecked": true
     },
     {
         "name": "Leonardo",
@@ -37,7 +38,8 @@
             {"type":"generic", "label":"Multiple ML Models"},
             {"type":"generic", "label":"LLM Prompt generation"},
             {"type":"generic", "label":"Private generations", "premium":true}
-        ]
+        ],
+        "infoChecked": true
     },
     {
         "name": "Eleven labs",
