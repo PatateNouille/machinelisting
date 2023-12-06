@@ -59,6 +59,7 @@
             {"label":"$24 /m /y"}
         ],
         "features": [
+            {"type":"convert", "from":"Text", "to":"Song"},
             {"type":"generic", "label":"No attribution"},
             {"type":"generic", "label":"Commercial use", "premium":true}
         ],
@@ -124,6 +125,8 @@
             {"type":"edit", "on":"NeRF", "with":"Camera track"},
             {"type":"convert", "from":"NeRF", "to":"Mesh"},
             {"type":"generic", "label":"Embed NeRFs on web pages"},
+            {"type":"generic", "label":"No attribution", "premium":true},
+            {"type":"generic", "label":"Commercial use"},
             {"type":"generic", "label":"API access"}
         ],
         "caveats": [
@@ -135,12 +138,14 @@
     {
         "name": "Luma Labs Genie",
         "url": "https://lumalabs.ai/discord",
-        "desc": "Generate",
+        "desc": "Generate 3D models from text prompts, create variants or download them for free",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free", "type":"free"}
         ],
         "features": [
-            {"type":"convert", "from":"Text", "to":"3D"}
+            {"type":"convert", "from":"Text", "to":"Mesh"},
+            {"type":"generic", "label":"No attribution", "premium":true},
+            {"type":"generic", "label":"Commercial use"}
         ],
         "caveats": [
             {"label":"Use through discord only", "severity":"low"}

@@ -79,7 +79,7 @@ header
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.resource
+.service
 {
     margin: 10px;
     padding: 10px;
@@ -92,12 +92,12 @@ header
     background-image: linear-gradient(180deg, transparent, var(--panel-background));
 }
 
-.resource.need-check
+.service.need-check
 {
     border-color: var(--warning);
 }
 
-.resource.need-check::after
+.service.need-check::after
 {
     margin: 2px 5px;
     padding: 2px 4px;
@@ -109,7 +109,7 @@ header
 }
 
 
-.resource .name
+.service .name
 {
     margin-bottom: 8px;
 
@@ -122,7 +122,7 @@ header
     font-size: 1.2em;
 }
 
-.resource .name::after
+.service .name::after
 {
     width: 17px;
     height: 17px;
@@ -142,20 +142,20 @@ header
 }
 
 
-.resource .desc
+.service .desc
 {
     color: var(--text-secondary);
 }
 
 
-.resource .pricing-options
+.service .pricing-options
 {
     margin: 5px 0;
 
     display: flex;
 }
 
-.resource .pricing
+.service .pricing
 {
     margin: 2px 5px;
     padding: 2px 4px;
@@ -165,33 +165,33 @@ header
     background-color: var(--neutral);
 }
 
-.resource .pricing.free
+.service .pricing.free
 {
     background-color: var(--success);
 }
 
-.resource .pricing.free-trick
+.service .pricing.free-trick
 {
     background-image: linear-gradient(25deg, var(--success) 50%, var(--neutral) 50%);
 }
 
-.resource .pricing.free-limited
+.service .pricing.free-limited
 {
     background-image: linear-gradient(25deg, var(--success) 50%, var(--warning) 50%);
 }
 
-.resource .pricing.expensive
+.service .pricing.expensive
 {
     background-color: var(--warning);
 }
 
-.resource .pricing.special
+.service .pricing.special
 {
     background-color: var(--warning);
 }
 
 
-.resource .features
+.service .features
 {
     margin: 5px 0;
 
@@ -200,7 +200,7 @@ header
     align-items: stretch;
 }
 
-.resource .feature
+.service .feature
 {
     margin: 2px 5px;
 
@@ -208,12 +208,12 @@ header
     align-items: center;
 }
 
-.resource .feature.premium
+.service .feature.premium
 {
     color: var(--text-warning);
 }
 
-.resource .feature.premium::after
+.service .feature.premium::after
 {
     width: 13px;
     height: 13px;
@@ -232,18 +232,18 @@ header
     content: '';
 }
 
-.resource .feature.generic
+.service .feature.generic
 {
     padding: 2px 4px;
 }
 
-.resource .feature.edit
+.service .feature.edit
 {
     padding: 0 4px;
 }
 
 
-.resource .caveats
+.service .caveats
 {
     margin: 5px 0;
 
@@ -252,18 +252,18 @@ header
     align-items: stretch;
 }
 
-.resource .caveat
+.service .caveat
 {
     margin: 2px 5px;
     padding: 3px 5px;
 }
 
-.resource .caveat.low
+.service .caveat.low
 {
     color: var(--text-error);
 }
 
-.resource .caveat.medium
+.service .caveat.medium
 {
     border-radius: 4px;
     box-shadow: inset 0px 0px 0px 2px var(--error);
@@ -271,7 +271,7 @@ header
     color: var(--text-error);
 }
 
-.resource .caveat.high
+.service .caveat.high
 {
     background-color: var(--error);
     color: var(--text);

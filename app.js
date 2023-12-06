@@ -5,7 +5,7 @@ var catalogElem = document.getElementById('catalog');
 
 
 // --- Test
-getGithubJSON('PatateNouille', 'machinelisting', 'resources.json', populateResources, 'Could not load the resource data :(');
+getGithubJSON('PatateNouille', 'machinelisting', 'services.json', populateResources, 'Could not load the services data :(');
 
 
 
