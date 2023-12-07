@@ -282,12 +282,14 @@
         "features": [
             {"type":"convert", "from":"Text", "to":"Video"},
             {"type":"convert", "from":"Image", "to":"Video"},
-            {"type":"generic", "label":"Private generation"}
+            {"type":"generic", "label":"Private generation"},
+            {"type":"generic", "label":"Commercial use"}
         ],
         "caveats": [
             {"label":"To remove watermarks you have to participate in challenges and be elected winner 10x", "severity":"low"},
             {"label":"Use through discord only", "severity":"low"}
-        ]
+        ],
+        "infoChecked": true
     },
     {
         "name": "CapCut",
