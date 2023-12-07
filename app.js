@@ -20,20 +20,20 @@ function populateResources(data)
 
 function createResourceElement(data)
 {
-    const resElem = document.createElement('div');
-    const nameElem = resElem.appendChild(document.createElement('a'));
-    const descElem = resElem.appendChild(document.createElement('p'));
-    const pricingOptionsElem = resElem.appendChild(document.createElement('div'));
-    const featuresElem = resElem.appendChild(document.createElement('div'));
+    const serviceElem = document.createElement('div');
+    const nameElem = serviceElem.appendChild(document.createElement('a'));
+    const descElem = serviceElem.appendChild(document.createElement('p'));
+    const pricingOptionsElem = serviceElem.appendChild(document.createElement('div'));
+    const featuresElem = serviceElem.appendChild(document.createElement('div'));
     
-    resElem.classList.add('resource');
+    serviceElem.classList.add('service');
     nameElem.classList.add('name');
     descElem.classList.add('desc');
     pricingOptionsElem.classList.add('pricing-options');
     featuresElem.classList.add('features');
 
     if (data.infoChecked !== true)
-        resElem.classList.add('need-check');
+        serviceElem.classList.add('need-check');
 
     nameElem.href = data.url;
     nameElem.innerText = data.name;
@@ -108,7 +108,7 @@ function createResourceElement(data)
     // - Add all caveats
     if ('caveats' in data)
     {
-        const caveatsElem = resElem.appendChild(document.createElement('div'));
+        const caveatsElem = serviceElem.appendChild(document.createElement('div'));
         caveatsElem.classList.add('caveats');
         data.caveats.forEach(caveat =>
         {
@@ -130,7 +130,7 @@ function createResourceElement(data)
         });
     }
 
-    return resElem;
+    return serviceElem;
 }
 
 function createResourceTypeElement(type)
