@@ -149,16 +149,23 @@
         ],
         "caveats": [
             {"label":"Use through discord only", "severity":"low"}
-        ]
+        ],
+        "infoChecked": true
     },
     {
         "name": "Perplexity",
         "url": "https://www.perplexity.ai/",
-        "desc": "search/general",
+        "desc": "Web search, information discovery assistant",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free", "type":"free"},
+            {"label":"$20 /m"},
+            {"label":"$200 /y", "tooltip":"$16.67 /m /y"}
         ],
         "features": [
+            {"type":"generic", "label":"Web search post processor"},
+            {"type":"generic", "label":"Conversational GPT assistant"},
+            {"type":"generic", "label":"Multiple models", "tooltip":"GPT-4 / Claude-2, upcoming Llama and Mistral", "premium":true},
+            {"type":"generic", "label":"API access", "premium":true}
         ]
     },
     {

@@ -93,6 +93,16 @@ function createResourceElement(data)
                 featureElem.appendChild(createFeatureTypeElement(feature.with))
                 break;
         }
+
+        if ('tooltip' in feature)
+        {
+            const tooltipElem = featureElem.appendChild(document.createElement('span'));
+
+            featureElem.classList.add('has-tooltip');
+            tooltipElem.classList.add('tooltip');
+
+            tooltipElem.innerText = feature.tooltip;
+        }
     });
 
     // - Add all caveats
@@ -107,6 +117,16 @@ function createResourceElement(data)
             caveatElem.classList.add('caveat', caveat.severity);
             
             caveatElem.innerText = caveat.label;
+
+            if ('tooltip' in caveat)
+            {
+                const tooltipElem = caveatElem.appendChild(document.createElement('span'));
+    
+                caveatElem.classList.add('has-tooltip');
+                tooltipElem.classList.add('tooltip');
+    
+                tooltipElem.innerText = caveat.tooltip;
+            }
         });
     }
 
