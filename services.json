@@ -388,22 +388,5 @@
             {"label":"Some features only available on google's pixel phones", "severity":"medium"}
         ],
         "infoChecked": true
-    },
-    {
-        "name": "Example Resource",
-        "url": "https://url.com/",
-        "desc": "Quick desc of the resource",
-        "pricingOptions": [
-            {"label":"50 tk + 25 tk/d", "type":"free"},
-            {"label":"Incognito", "tooltip":"Clear cookies to reset token count", "type":"free-trick"},
-            {"label":"$10 /m"},
-            {"label":"$500 /m", "type":"special"}
-        ],
-        "features": [
-            {"type":"convert", "from":"Text", "to":"Image"},
-            {"type":"edit", "on":"Image", "with":"Inpainting", "premium":true},
-            {"type":"generic", "label":"Custom model training"}
-        ],
-        "infoChecked": true
     }
 ]

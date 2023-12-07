@@ -36,6 +36,7 @@ function createResourceElement(data)
         serviceElem.classList.add('need-check');
 
     nameElem.href = data.url;
+    nameElem.target = '_blank';
     nameElem.innerText = data.name;
     descElem.innerText = data.desc;
 

@@ -273,6 +273,8 @@ header
 
 .service .caveat.high
 {
+    border-radius: 4px;
+    
     background-color: var(--error);
     color: var(--text);
 }
