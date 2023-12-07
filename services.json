@@ -5,7 +5,6 @@
         "desc": "Create production-ready assets with speed and consistency",
         "pricingOptions": [
             {"label":"150 tk/d", "tooltip":"30 up/d and 75 bg rm/d", "type":"free"},
-            {"label":"IMA", "tooltip":"Infinite Mail Accounts", "type":"free-trick"},
             {"label":"$10 /m /y"},
             {"label":"$24 /m /y"},
             {"label":"$48 /m /y", "type":"expensive"}
@@ -68,7 +67,7 @@
     {
         "name": "RunwayML",
         "url": "https://runwayml.com/",
-        "desc": "Generate videos from anything and e",
+        "desc": "Generate videos from anything and edit them",
         "pricingOptions": [
             {"label":"125 tk", "tooltip":"Does not regenerate", "type":"free-limited"},
             {"label":"$12 /m /y"},
@@ -158,111 +157,136 @@
         "desc": "Web search, information discovery assistant",
         "pricingOptions": [
             {"label":"Free", "type":"free"},
-            {"label":"$20 /m"},
-            {"label":"$200 /y", "tooltip":"$16.67 /m /y"}
+            {"label":"$12 /m /y"}
         ],
         "features": [
             {"type":"generic", "label":"Web search post processor"},
             {"type":"generic", "label":"Conversational GPT assistant"},
             {"type":"generic", "label":"Multiple models", "tooltip":"GPT-4 / Claude-2, upcoming Llama and Mistral", "premium":true},
+            {"type":"generic", "label":"No attribution"},
             {"type":"generic", "label":"API access", "premium":true}
-        ]
+        ],
+        "infoChecked": true
     },
     {
         "name": "SciSpace",
         "url": "https://typeset.io/",
         "desc": "search scientific papers",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free", "type":"free"},
+            {"label":"$20 /m"},
+            {"label":"$200 /y", "tooltip":"$16.67 /m /y"},
+            {"label":"Enterprise", "type":"special"}
         ],
         "features": [
-        ]
+            {"type":"generic", "label":"Scientific paper search engine"},
+            {"type":"generic", "label":"Scientific/complex text reading assistant"},
+            {"type":"edit", "on":"Text", "with":"Paraphrasing"},
+            {"type":"edit", "on":"Text", "with":"Translating"},
+            {"type":"edit", "on":"PDF", "with":"Data extraction"},
+            {"type":"generic", "label":"Citation generator"},
+            {"type":"generic", "label":"AI text detector", "tooltip":"Can be used on text samples or PDFs"}
+        ],
+        "infoChecked": true
     },
     {
-        "name": "Google Labs",
-        "url": "https://labs.google/",
-        "desc": "Multiple models",
+        "name": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "desc": "Generate music audio from text and melody",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free", "type":"free"}
         ],
         "features": [
-        ]
+            {"type":"convert", "from":"Text", "to":"Music"},
+            {"type":"generic", "label":"Constrain generation with melody audio or mic recording"}
+        ],
+        "caveats": [
+            {"label":"Generated clips are a fixed 15s", "severity":"low"},
+            {"label":"Variable generation times", "severity":"low"}
+        ],
+        "infoChecked": true
     },
     {
         "name": "Waveformer",
         "url": "https://waveformer.replicate.dev/",
         "desc": "Easier to use but more limited version of MusicGen",
         "pricingOptions": [
-            {"label":"WIP"}
-        ],
-        "features": [
-            {"type":"convert", "from":"Text", "to":"3D"}
-        ]
-    },
-    {
-        "name": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "desc": "WIP",
-        "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free", "type":"free"}
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"Music"}
-        ]
+        ],
+        "caveats": [
+            {"label":"Variable generation times", "severity":"low"}
+        ],
+        "infoChecked": true
     },
     {
         "name": "TextFX",
         "url": "https://textfx.withgoogle.com/",
-        "desc": "text tools",
+        "desc": "These 10 tools are designed to expand the writing process by generating creative possibilities with text and language",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free", "type":"free"}
         ],
         "features": [
-        ]
+            {"type":"edit", "on":"Text", "with":"Simile", "tooltip":"Sort of paraphrasing"},
+            {"type":"edit", "on":"Text", "with":"Pronunciation based decomposition"},
+            {"type":"edit", "on":"Text", "with":"Unexpected autocomplete", "tooltip":"Continues a sentence with original ideas"},
+            {"type":"edit", "on":"Text", "with":"Semantical chains", "tooltip":"Example: Picture, frame, border, country, flag, Italy, pizza, pie"},
+            {"type":"edit", "on":"Text", "with":"POV description", "tooltip":"Find ideas from the point of view of the prompt"},
+            {"type":"edit", "on":"Text", "with":"Alliteration", "tooltip":"Words with specific letters or sounds"},
+            {"type":"edit", "on":"Text", "with":"Acronym decomposer"},
+            {"type":"edit", "on":"Text", "with":"Meaning connections", "tooltip":"Finds how two subjects are related"},
+            {"type":"edit", "on":"Text", "with":"Scenic interpretation", "tooltip":"Outputs text based on a scene description"},
+            {"type":"edit", "on":"Text", "with":"Compound nouns", "tooltip":"Finds compounded nouns containing the prompt"}
+        ],
+        "infoChecked": true
     },
     {
         "name": "Leia Pix",
         "url": "https://convert.leiapix.com/",
-        "desc": "WIP",
+        "desc": "Turn pictures into depth and animate camera movement",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free + 300 tk", "type":"free"},
+            {"label":"$10 / 1000 tk"}
         ],
         "features": [
-            {"type":"convert", "from":"Image", "to":"Video"},
-            {"type":"convert", "from":"Image", "to":"Depth map"}
-        ]
-    },
-    {
-        "name": "Ilumine AI",
-        "url": "https://huggingface.co/spaces/ilumine-AI/Insta-3D",
-        "desc": "Visualize images in 3D with a depth map",
-        "pricingOptions": [
-            {"label":"WIP"}
+            {"type":"convert", "from":"Image", "to":"Video >720p", "tooltip":"Costs 50 tokens", "premium":true},
+            {"type":"convert", "from":"Image", "to":"Video <=720p/LIF/SBS"},
+            {"type":"convert", "from":"Image", "to":"Depth map"},
+            {"type":"generic", "label":"No attribution"},
+            {"type":"generic", "label":"Commercial use*", "tooltip":"Contact their support to obtain authorization"},
+            {"type":"generic", "label":"API access"}
         ],
-        "features": [
-        ]
+        "infoChecked": true
     },
     {
         "name": "Drawing Animation",
         "url": "https://sketch.metademolab.com/",
-        "desc": "Animate your childhood drawings",
+        "desc": "Bring children's drawings to life, by animating characters to move around",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free", "type":"free"}
         ],
         "features": [
             {"type":"convert", "from":"Image", "to":"Video"}
-        ]
+        ],
+        "infoChecked": true
     },
     {
         "name": "Pika",
         "url": "http://discord.gg/pika",
-        "desc": "WIP",
+        "desc": "Create videos from text or images",
         "pricingOptions": [
-            {"label":"WIP"}
+            {"label":"Free", "type":"free"}
         ],
         "features": [
             {"type":"convert", "from":"Text", "to":"Video"},
-            {"type":"convert", "from":"Image", "to":"Video"}
+            {"type":"convert", "from":"Image", "to":"Video"},
+            {"type":"generic", "label":"Private generation"}
+        ],
+        "caveats": [
+            {"label":"To remove watermarks you have to participate in challenges and be elected winner 10x", "severity":"low"},
+            {"label":"Use through discord only", "severity":"low"}
         ]
     },
     {
@@ -338,6 +362,32 @@
             {"type":"convert", "from":"Text", "to":"Image"},
             {"type":"convert", "from":"Image", "to":"Image"}
         ]
+    },
+    {
+        "name": "Google Labs",
+        "url": "https://labs.google/",
+        "desc": "Google's varied experiments",
+        "pricingOptions": [
+            {"label":"Free", "type":"free"}
+        ],
+        "features": [
+            {"type":"generic", "label":"Google search AI engine"},
+            {"type":"edit", "on":"Image", "with":"Object removal", "tooltip":"Pixel 8 and 8 Pro only"},
+            {"type":"edit", "on":"Image", "with":"Move objects", "tooltip":"Pixel 8 and 8 Pro only"},
+            {"type":"edit", "on":"Image", "with":"Expression variations", "tooltip":"Pixel 8 and 8 Pro only"},
+            {"type":"edit", "on":"Image", "with":"Upscaling", "tooltip":"Pixel 8 and 8 Pro only"},
+            {"type":"edit", "on":"Video", "with":"Sound mixing", "tooltip":"Pixel 8 and 8 Pro only"},
+            {"type":"edit", "on":"Home Automation Scripts", "with":"Natural conversation assistant"},
+            {"type":"generic", "label":"Cloud-based IDE with AI assistant", "tooltip":"Waitlist restricted"},
+            {"type":"generic", "label":"Message composer assistant", "tooltip":"Android only, Waitlist restricted"},
+            {"type":"generic", "label":"AI notebook", "tooltip":"Waitlist restricted"},
+            {"type":"convert", "from":"Text", "to":"Music", "tooltip":"Waitlist restricted"}
+        ],
+        "caveats": [
+            {"label":"Most models access restricted via waitlist", "severity":"high"},
+            {"label":"Some features only available on google's pixel phones", "severity":"medium"}
+        ],
+        "infoChecked": true
     },
     {
         "name": "Example Resource",
